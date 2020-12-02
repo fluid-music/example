@@ -1,0 +1,27 @@
+{
+  "name": "@fluid-music/example",
+  "version": "0.0.1",
+  "description": "Demo composition created with fluid-music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fluid-music/example.git"
+  },
+  "keywords": [
+    "fluid-music"
+  ],
+  "author": "Charles Holbrow",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fluid-music/example/issues"
+  },
+  "homepage": "https://github.com/fluid-music/example#readme",
+  "dependencies": {
+    "@fluid-music/g3rd": "file:../fluid-music-g3rd",
+    "@fluid-music/kit": "^4.0.0",
+    "fluid-music": "file:../../cybr/fluid-music"
+  }
+}
