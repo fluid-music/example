@@ -38,9 +38,10 @@ const session = new fluid.FluidSession({ bpm: 66, dLibrary, tLibrary: stereo.tLi
     { name: 'kick' },
     { name: 'snare', gainDb: -4.75 },
     { name: 'tamb', gainDb: -7.5 },
-    { name: 'rides', tLibrary: g3rd.rides.tLibrary ,children: [
+    { name: 'rides', gainDb: -2, tLibrary: g3rd.rides.tLibrary ,children: [
       { name: 'ride' },
       { name: 'rideX' },
+      { name: 'rideI' },
     ]},
   ]},
   { name: 'sub', tLibrary: fluid.tLibrary.midiScale(21), plugins: [subBassSynth] },
