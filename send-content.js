@@ -10,6 +10,7 @@ async function run() {
     cybr.content.clear(),
     fluid.sessionToContentFluidMessage(session),
     fluid.cybr.transport.loop(0, 4),
+    fluid.cybr.transport.play(),
     cybr.global.save(),
   ])
   console.warn('Saved tracktionedit/out.tracktionedit')

@@ -55,7 +55,7 @@ session.insertScore({
 session.insertScore({
   r:      '1+2+3+4....',
   guitar: 'g-------   ', // guitar
-  guitarX:'  ',
+  guitarX:'',
   gStrs:  '           ', // stretched guitars
   gStrX:  '',
   gStrI:  '',

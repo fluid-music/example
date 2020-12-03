@@ -9,5 +9,4 @@ const client = new fluid.Client()
 client.send([
   fluid.cybr.global.activate(tracktionFilename, true),
   fluid.sessionToTemplateFluidMessage(session),
-  fluid.cybr.transport.play(),
 ])

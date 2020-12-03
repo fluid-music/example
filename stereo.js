@@ -38,7 +38,8 @@ function getWidthAtTime(track, time) {
 }
 
 /**
- * 
+ * A WidthRamp inserts two automation points, ramping the width from it's
+ * starting value to the 'target' over the course of the event.
  */
 class WidthRamp {
   /**
