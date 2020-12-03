@@ -1,9 +1,0 @@
-{
-    "events": {
-        "start": "node send-template.js"
-    },
-    "watch": [
-        "session-content.js",
-        "send-content.js"
-    ]
-}

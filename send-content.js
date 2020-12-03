@@ -9,8 +9,8 @@ async function run() {
   await client.send([
     cybr.content.clear(),
     fluid.sessionToContentFluidMessage(session),
-    cybr.transport.loop(1, 3),
-    cybr.global.save()
+    fluid.cybr.transport.loop(0, 4),
+    cybr.global.save(),
   ])
   console.warn('Saved tracktionedit/out.tracktionedit')
 }

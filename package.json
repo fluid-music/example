@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon send-content"
+    "watch": "node send-template && nodemon send-content -w session-content.js -w send-content.js"
   },
   "repository": {
     "type": "git",
