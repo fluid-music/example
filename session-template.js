@@ -7,9 +7,9 @@ const stereo = require('./stereo')
 const subBassSynth = fluid.plugins.podolskiVst2Presets.sineSlowDecay()
 const reverb = new fluid.plugins.DragonflyRoomVst2({
   dryLevelPercent: 0,
-  lateLevelPercent: 80,
-  earlySendPercent: 33,
-  earlyLevelPercent: 12,
+  lateLevelPercent: 85,
+  earlySendPercent: 55,
+  earlyLevelPercent: 7,
   sizeMeters: 25,
   predelayMs: 16,
   diffusePercent: 98,
@@ -34,18 +34,18 @@ const session = new fluid.FluidSession({ bpm: 66, dLibrary, tLibrary: stereo.tLi
     { name: 'gStrI' },
     { name: 'gStrX' },
   ]},
-  { name: 'drums', sends: [{ to: 'reverb', gainDb: 0 }], tLibrary: kit.tLibrary, children: [
+  { name: 'drums', sends: [{ to: 'reverb', gainDb: -9 }], tLibrary: kit.tLibrary, children: [
     { name: 'kick' },
     { name: 'snare', gainDb: -4.75 },
-    { name: 'tamb', gainDb: -7.5 },
-    { name: 'rides', gainDb: -2, tLibrary: g3rd.rides.tLibrary ,children: [
-      { name: 'ride' },
+    { name: 'tamb', gainDb: -8 },
+    { name: 'rides', gainDb: -2, tLibrary: g3rd.rides.tLibrary, children: [
+      { name: 'ride', gainDb: -6 },
       { name: 'rideX' },
       { name: 'rideI' },
     ]},
   ]},
   { name: 'sub', tLibrary: fluid.tLibrary.midiScale(21), plugins: [subBassSynth] },
-  { name: 'reverb', gainDb: -16, plugins: [reverb] }
+  { name: 'reverb', gainDb: 0, plugins: [reverb] }
 ])
 
 module.exports = session

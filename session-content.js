@@ -5,11 +5,12 @@ session.insertScore({
   gStrs: ' >- ',
   reverb:' >--',
 })
+
 session.insertScore({
   r:      '1 2 3 4..',
   guitar: 'a---b----', // guitar
   guitarX:'      c--',
-  gStrs:  '        ', // stretched guitars
+  gStrs:  '<        ', // stretched guitars
   gStrX:  'f--------',
   gStrI:  'f',
   kick:   'D        ', // drums
@@ -18,7 +19,7 @@ session.insertScore({
   ride:   'a-b-c-d--',
   rideX:  '    a-   ',
   sub:    'E        ',
-  reverb: '',
+  reverb: '<---',
 })
 
 session.insertScore({
@@ -43,7 +44,7 @@ session.insertScore({
   guitarI:'',
   gStrs:  '',          // stretched guitar
   gStrI:  'd g------',
-  gStrX:  '',
+  gStrX:  'a-b-c-def',
   kick:   'D        ', // drums
   snare:  '         ',
   tamb:   't t t t  ',
