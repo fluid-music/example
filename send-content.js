@@ -9,7 +9,7 @@ async function run() {
   await client.send([
     cybr.content.clear(),
     fluid.sessionToContentFluidMessage(session),
-    fluid.cybr.transport.loop(0, 4),
+    fluid.cybr.transport.loop(0, 5),
     fluid.cybr.transport.play(),
     cybr.global.save(),
   ])

@@ -24,24 +24,24 @@ const reverb = new fluid.plugins.DragonflyRoomVst2({
 })
 
 const session = new fluid.FluidSession({ bpm: 66, dLibrary, tLibrary: stereo.tLibrary }, [
-  { name: 'guitars', tLibrary: g3rd.guitars.tLibrary, children: [
-    { name: 'guitar' },
-    { name: 'guitarX' },
-    { name: 'guitarI' },
+  { name: 'guitars', children: [
+    { name: 'guitar', tLibrary: g3rd.guitar },
+    { name: 'guitarX', tLibrary: g3rd.reverse },
+    { name: 'guitarI', tLibrary: g3rd.reverseLeadIn },
   ]},
-  { name: 'gStrs', sends: [{ to: 'reverb', gainDb: 0 }], tLibrary: g3rd.guitars.tLibraryStretched, children: [
-    { name: 'gStr' },
-    { name: 'gStrI' },
-    { name: 'gStrX' },
+  { name: 'gStrs', sends: [{ to: 'reverb', gainDb: 0 }], children: [
+    { name: 'gStr', tLibrary: g3rd.stretch },
+    { name: 'gStrX', tLibrary: g3rd.stretchReverse },
+    { name: 'gStrI', tLibrary: g3rd.stretchReverseLeadIn },
   ]},
   { name: 'drums', sends: [{ to: 'reverb', gainDb: -9 }], tLibrary: kit.tLibrary, children: [
     { name: 'kick' },
     { name: 'snare', gainDb: -4.75 },
     { name: 'tamb', gainDb: -8 },
-    { name: 'rides', gainDb: -2, tLibrary: g3rd.rides.tLibrary, children: [
-      { name: 'ride', gainDb: -6 },
-      { name: 'rideX' },
-      { name: 'rideI' },
+    { name: 'rides', gainDb: -2, children: [
+      { name: 'ride', gainDb: -3, tLibrary: g3rd.rides },
+      { name: 'rideX', tLibrary: g3rd.ridesReverse },
+      { name: 'rideI', tLibrary: g3rd.ridesReverseLeadIn },
     ]},
   ]},
   { name: 'sub', tLibrary: fluid.tLibrary.midiScale(21), plugins: [subBassSynth] },
