@@ -1,6 +1,8 @@
 const fluid = require('fluid-music')
 const kit = require('@fluid-music/kit')
 const g3rd = require('@fluid-music/g3rd')
+const rides = require('@fluid-music/rides')
+
 const dLibrary = new Array(10).fill(0).map((_, i) => { return { trimDb: -18 + i*2 } })
 const stereo = require('./stereo')
 
@@ -39,9 +41,9 @@ const session = new fluid.FluidSession({ bpm: 66, dLibrary, tLibrary: stereo.tLi
     { name: 'snare', gainDb: -4.75 },
     { name: 'tamb', gainDb: -8 },
     { name: 'rides', gainDb: -2, children: [
-      { name: 'ride', gainDb: -3, tLibrary: g3rd.rides },
-      { name: 'rideX', tLibrary: g3rd.ridesReverse },
-      { name: 'rideI', tLibrary: g3rd.ridesReverseLeadIn },
+      { name: 'ride', gainDb: -3, tLibrary: rides.rides },
+      { name: 'rideX', tLibrary: rides.ridesReverse },
+      { name: 'rideI', tLibrary: rides.ridesReverseLeadIn },
     ]},
   ]},
   { name: 'sub', tLibrary: fluid.tLibrary.midiScale(21), plugins: [subBassSynth] },

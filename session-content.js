@@ -1,5 +1,9 @@
 const session = require('./session-template')
 
+session.loopEnabled = true
+session.loopRegion.startTime = 1
+session.loopRegion.duration = 2
+
 session.insertScore({
   r:     '1234',
   gStrs: ' >- ',
@@ -16,8 +20,8 @@ session.insertScore({
   kick:   'D        ', // drums
   snare:  '       kk',
   tamb:   't t t t  ',
-  ride:   'a-b-c-d--',
-  rideX:  '    a-   ',
+  ride:   'C-A-B-D--',
+  rideX:  '    C-   ',
   sub:    'E        ',
   reverb: '<---',
 })
@@ -32,8 +36,8 @@ session.insertScore({
   kick:   'D     D   d', // drums
   snare:  '  r    k   ',
   tamb:   ' t t t  tt ',
-  ride:   'a----------',
-  rideX:  'b-----.....',
+  ride:   'C----------',
+  rideX:  'A-----.....',
   sub:    'E          ',
 })
 
@@ -48,7 +52,7 @@ session.insertScore({
   kick:   'D        ', // drums
   snare:  '         ',
   tamb:   't t t t  ',
-  ride:   'a-b-c-d--',
+  ride:   'C-A-B-D--',
   rideX:  '    a-',
   sub:    'E        ',
 })
@@ -63,7 +67,7 @@ session.insertScore({
   kick:   'd', // drums
   snare:  '',
   tamb:   '',
-  ride:   'a----------',
+  ride:   'C----------',
   rideX:  '',
   rideI:  'b-',
 })
