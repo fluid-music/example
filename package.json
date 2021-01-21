@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/fluid-music/example#readme",
   "dependencies": {
-    "@fluid-music/g3rd": "file:../fluid-music-g3rd",
+    "@fluid-music/g3rd": "0.0.1",
     "@fluid-music/kit": "^4.0.2",
     "@fluid-music/rides": "0.0.1",
     "fluid-music": "^0.9.2"
